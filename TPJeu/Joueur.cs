@@ -6,12 +6,27 @@ namespace TPJeu
 {
     class Joueur
     {
-        int PointsVie { get; }
-        bool EstVivant { get; }
-        public Joueur(int pointsvie)
+
+        public int PointsVie { get; set; }
+
+        public bool EstVivant
         {
-            PointsVie = pointsvie;
+            get 
+            {
+                return EstVivant;
+            }
+            private set
+            {
+                if (PointsVie <= 0)
+                    EstVivant = false;
+            }
         }
+
+        public Joueur()
+        {
+            PointsVie = 150;
+        }
+
 
         public void Attaque(Monstre monstre)
         {
