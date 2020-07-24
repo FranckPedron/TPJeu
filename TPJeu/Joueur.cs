@@ -7,7 +7,7 @@ namespace TPJeu
     class Joueur
     {
 
-        public int PointsVie { get; set; }
+        public int PointsVieJoueur { get; set; }
 
         public bool EstVivant
         {
@@ -24,7 +24,7 @@ namespace TPJeu
 
         public Joueur()
         {
-            PointsVie = 150;
+            PointsVieJoueur = 150;
         }
 
 

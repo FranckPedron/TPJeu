@@ -6,5 +6,11 @@ namespace TPJeu
 {
     class Monstre
     {
+        protected int PointsVieMonstre {get; set;}
+
+
+
+        public virtual void Attaque(){
+        }
     }
 }

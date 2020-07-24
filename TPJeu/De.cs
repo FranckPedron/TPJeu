@@ -6,5 +6,13 @@ namespace TPJeu
 {
     class De
     {
+        public De()
+        {
+        random = new Random();
+        }
+
+        public int LanceLeDe(){
+        return random.Next(1,7) ;
+        }
     }
 }
