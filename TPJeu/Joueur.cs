@@ -6,36 +6,45 @@ namespace TPJeu
 {
     class Joueur
     {
-
-        public int PointsVieJoueur { get; set; }
-
+        private De de;
+        public int PtsVie { get; private set; }
         public bool EstVivant
         {
             get 
             {
-                return EstVivant;
-            }
-            private set
-            {
-                if (PointsVie <= 0)
-                    EstVivant = false;
+                return PtsVie>0;
             }
         }
 
-        public Joueur()
+        public Joueur(int points)
         {
-            PointsVieJoueur = 150;
+            PtsVie = points;
+            de=new De();
         }
 
 
         public void Attaque(Monstre monstre)
         {
+            int lanceDeJoueur=this.LanceLeDe();
+            int lanceDeMonstre=monstre.LanceleDe();
 
+            if(lanceDeJoueur>=lanceDeMonstre){
+                monstre.SubitDegats();
+            }
         }
 
         public void SubitDegats(int degatsSubits)
         {
+            if (!BouclierFonctionne())
+            PtsVie-=degatsSubits;
+        }
 
+        private BouclierFonctionne(){
+            return de.LanceLeDe()<=2;
+        }
+        
+        public int LanceLeDe(){
+        return de.LanceLeDe();
         }
     }
 }
