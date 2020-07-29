@@ -17,5 +17,10 @@ namespace TPJeu
         {
             return random.Next(1,7) ;
         }
+
+        public int LanceLeDe(int val)
+        {
+            return random.Next(1, val);
+        }
     }
 }

@@ -33,6 +33,12 @@ namespace TPJeu
             }
         }
 
+        public void Attaque(BossDeFin boss)
+        {
+            int deg = LanceLeDe(26);
+            boss.SubitDegats(deg);
+        }
+      
         public void SubitDegats(int degatsSubits)
         {
             if (!BouclierFonctionne())
@@ -46,5 +52,11 @@ namespace TPJeu
         public int LanceLeDe(){
         return de.LanceLeDe();
         }
+
+        public int LanceLeDe(int val)
+        {
+            return de.LanceLeDe(val);
+        }
+
     }
 }
