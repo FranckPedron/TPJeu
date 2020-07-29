@@ -29,6 +29,7 @@ namespace TPJeu
             Console.WriteLine("\t1 : Contre les monstres");
             Console.WriteLine("\t2 : Contre le boss de fin");
         }
+
         private static void Jeu1()
         {
             Joueur franck = new Joueur(150);
