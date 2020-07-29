@@ -23,10 +23,10 @@ namespace TPJeu
         }
 
 
-        public void Attaque(Monstre monstre)
+        public void Attaque(MonstreFacile monstre)
         {
             int lanceDeJoueur=this.LanceLeDe();
-            int lanceDeMonstre=monstre.LanceleDe();
+            int lanceDeMonstre=monstre.LanceLeDe();
 
             if(lanceDeJoueur>=lanceDeMonstre){
                 monstre.SubitDegats();
@@ -39,7 +39,7 @@ namespace TPJeu
             PtsVie-=degatsSubits;
         }
 
-        private BouclierFonctionne(){
+        private bool BouclierFonctionne(){
             return de.LanceLeDe()<=2;
         }
         

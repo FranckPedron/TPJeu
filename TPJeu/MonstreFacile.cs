@@ -25,7 +25,7 @@ namespace TPJeu
                 joueur.SubitDegats(degats);
         }
 
-        public voîd SubitDegats()
+        public void SubitDegats()
         {
             EstVivant=false;
         }
